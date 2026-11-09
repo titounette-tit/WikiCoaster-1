@@ -12,6 +12,7 @@ class CoasterType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
+            ->add('name')
             ->add('maxSpeed')
             ->add('length')
             ->add('maxHeight')

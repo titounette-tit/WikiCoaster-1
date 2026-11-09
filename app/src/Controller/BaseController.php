@@ -6,13 +6,16 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-class BaseController extends AbstractController 
+class BaseController extends AbstractController
 {
-
-    #[Route('/')] /** changer la route de symfony  pour afficher la focntion home */
+    /**
+     * Page d'accueil
+     */
+    #[Route('/')]
     public function home(): Response
     {
-        //crée  un rendu html du template twig
+        // Crée un rendu html du template Twig
         return $this->render('base/home.html.twig');
     }
+    
 }
